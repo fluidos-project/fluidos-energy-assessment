@@ -1,0 +1,1 @@
+### NOTA: fare attenzione nelle infrastrutture a mettere in tutte lo stesso orario di inizio e fine simulazione 

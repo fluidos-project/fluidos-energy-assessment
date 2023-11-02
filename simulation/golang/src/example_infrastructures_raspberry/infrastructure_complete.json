@@ -1,0 +1,40 @@
+{
+    "name": "Infra1",
+    "start_simulation": "2021-12-14 15:00:00",
+    "end_simulation": "2021-12-14 15:04:00",
+    "devices": 
+    [
+        {
+            "name": "laptop",
+            "replicas": "3",
+            "CPU_cores": "5822.35",
+            "CPU_usage_baseline": "1566.70",
+            "constant_load": {
+                "need_to_move": "true",
+                "load_to_move": [2000]
+            },  
+            "variable_load": {
+                "need_to_move": "true",
+                "load_to_move": [{"start": "2021-12-14 15:01:00", "end": "2021-12-14 15:03:00", "load": "1000"}]
+            },        
+            "consumption_details": "./example_consumption/laptop_consumption.json",
+            "performance_details": "./example_performance/laptop_performance.json"
+        },
+        {
+            "name": "desktop",
+            "replicas": "3",
+            "CPU_cores": "8148.73",
+            "CPU_usage_baseline": "1749.09",
+            "constant_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            }, 
+            "variable_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            },                 
+            "consumption_details": "./example_consumption/desktop_consumption.json",
+            "performance_details": "./example_performance/desktop_performance.json"
+        }
+    ]
+}

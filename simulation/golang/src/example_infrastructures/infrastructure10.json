@@ -1,0 +1,40 @@
+{
+    "name": "Infra1",
+    "start_simulation": "2021-12-14 15:00:00",
+    "end_simulation": "2021-12-14 15:10:00",
+    "devices": 
+    [
+        {
+            "name": "desktop",
+            "replicas": "40",
+            "CPU_cores": "8314",
+            "CPU_usage_baseline": "350",
+            "constant_load": {
+                "need_to_move": "true",
+                "load_to_move": [4125]
+            },  
+            "variable_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            },        
+            "consumption_details": "./example_consumption/desktop_consumption.json",
+            "performance_details": "./example_performance/desktop_performance.json"
+        },
+        {
+            "name": "server",
+            "replicas": "5",
+            "CPU_cores": "60853",
+            "CPU_usage_baseline": "2000",
+            "constant_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            }, 
+            "variable_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            },                 
+            "consumption_details": "./example_consumption/server_crownlabs_consumption.json",
+            "performance_details": "./example_performance/server_crownlabs_performance.json"
+        }
+    ]
+}

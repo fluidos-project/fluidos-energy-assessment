@@ -1,0 +1,72 @@
+{
+    "name": "Infra1",
+    "start_simulation": "2021-12-14 15:00:00",
+    "end_simulation": "2021-12-14 15:10:00",
+    "devices": 
+    [
+        {
+            "name": "crownlabs",
+            "replicas": "2",
+            "CPU_cores": "60853",
+            "CPU_usage_baseline": "10750",
+            "constant_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            },  
+            "variable_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            },        
+            "consumption_details": "./example_consumption/server_crownlabs_optimized_consumption.json",
+            "performance_details": "./example_performance/server_crownlabs_optimized_performance.json"
+        },
+        {
+            "name": "desktop",
+            "replicas": "5",
+            "CPU_cores": "8314",
+            "CPU_usage_baseline": "300",
+            "constant_load": {
+                "need_to_move": "true",
+                "load_to_move": [3500]
+            }, 
+            "variable_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            },                 
+            "consumption_details": "./example_consumption/desktop_consumption.json",
+            "performance_details": "./example_performance/desktop_performance.json"
+        },
+        {
+            "name": "laptop-fulvio",
+            "replicas": "5",
+            "CPU_cores": "5826",
+            "CPU_usage_baseline": "300",
+            "constant_load": {
+                "need_to_move": "true",
+                "load_to_move": [3500]
+            }, 
+            "variable_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            },                 
+            "consumption_details": "./example_consumption/laptop_fulvio_consumption.json",
+            "performance_details": "./example_performance/laptop_fulvio_performance.json"
+        },
+        {
+            "name": "raspi",
+            "replicas": "5",
+            "CPU_cores": "923",
+            "CPU_usage_baseline": "250",
+            "constant_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            },  
+            "variable_load": {
+                "need_to_move": "false",
+                "load_to_move": []
+            },        
+            "consumption_details": "./example_consumption/raspberry_consumption.json",
+            "performance_details": "./example_performance/raspberry_performance.json"
+        }
+    ]
+}
