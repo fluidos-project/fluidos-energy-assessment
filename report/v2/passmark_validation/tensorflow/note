@@ -1,0 +1,10 @@
+ i test sono stati fatti con tensorflow v.2.3.0
+ nel caso del raspberry sono stati assegnati 4 core, per il desktop 0.56
+
+ come riferimento, tensorflow eseguito sul desktop con un 1 core a disposizione permette fare un trai della rete neurale in 35s.
+
+ di seguito i comani docker usati 
+ - docker run -it --cpus=0.56 --privileged -v /home/stefano/Desktop/tensor.py:/tensor.py --rm tensorflow/tensorflow:2.3.0 python3 tensor.py
+ - docker run --cpus=4 --privileged -v /home/pi/Stefano/tensor.py:/tensor.py -it armindocachada/tensorflow2-raspberrypi4:2.3.0-cp35-none-linux_armv7l python3 tensor.py
+
+ si include nella directory anche una copia del file python usato nei test
